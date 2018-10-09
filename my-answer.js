@@ -674,3 +674,105 @@ function addFriend(userObj, friend) {
 console.log(addFriend(user, 'Pete'));
 
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Convert Celsius to Fahrenheit
+function convertToF(celsius) {
+    let fahrenheit;
+    fahrenheit=celsius*(9/5)+32;
+    return fahrenheit;
+}
+convertToF(30);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Reverse a String
+function reverseString(str) {
+    let myString="";
+    for (var i= str.length-1; i >=0 ; i--) {
+        myString+=str[i];
+    }
+    return myString;
+}
+reverseString("hello");
+// or
+function reverseString(str) {
+    let reversed = "";
+    for(let char of str){
+        reversed = char + reversed;
+    }
+    return reversed;
+}
+reverseString("hello");
+// or
+function reverseString(str) {
+    return [...str].reverse().join('');
+}
+reverseString("hello");
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Factorialize a Number
+function factorialize(num) {
+    if(num <= 1) {
+        return 1
+    } else {
+        return num * factorialize(num-1)
+    }
+}
+factorialize(5);
+// or
+function factorialize(num) {
+    var factor = 1;
+    for (var i = 1; i <= num ; i++) {
+        factor *= i;
+    }
+    return factor;
+}
+console.log(factorialize(5));
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Find the Longest Word in a String
+function findLongestWordLength(str) {
+    let myString=[...str];
+    myString.push(' ');
+    let counter=0;
+    let myLong=0;
+    console.log(myString)
+    for(let i=0;i<myString.length;i++){
+        counter++;
+        if(myString[i]==' '){
+            if(counter>myLong){
+                myLong=counter-1;
+            }
+            counter=0;
+        }
+    }
+    console.log(myLong);
+    return myLong;
+}
+findLongestWordLength("What if we try a super-long word such as otorhinolaryngology");
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Return Largest Numbers in Arrays
+function largestOfFour(arr) {
+// You can do this!
+let counter;
+let myArray=[];
+let myLong;
+for(let i=0;i<arr.length;i++){
+    myLong=arr[i][0];
+    for(let j=0;j<=arr[i].length;j++){
+        if(arr[i][j]>myLong){
+            myLong=arr[i][j];
+        }
+
+    }
+    myArray.push(myLong);
+}
+console.log(myArray)
+return myArray;
+}
+largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]);

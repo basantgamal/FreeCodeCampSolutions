@@ -776,3 +776,118 @@ console.log(myArray)
 return myArray;
 }
 largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Confirm the Ending
+function confirmEnding(str, target) {
+    // "Never give up and good luck will find you."
+    // -- Falcor
+    let check= str.endsWith(target);
+    return check;
+}
+confirmEnding("Bastian", "n");
+// or
+function confirmEnding(str, target) {
+    // "Never give up and good luck will find you."
+    // -- Falcor
+    let myArray=[...str];
+    let targetArray=[...target];
+    let j=myArray.length-1;
+    let check=true;
+    for(let i=targetArray.length-1 ;i>=0;i--){
+        if(myArray[j]!=targetArray[i]){
+            check=false;
+        }
+        j--;
+    }
+    console.log(myArray);
+    console.log(targetArray);
+    console.log(check);
+    return check;
+}
+confirmEnding("Bastian", "6n");
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Repeat a String Repeat a String
+
+function repeatStringNumTimes(str, num) {
+// repeat after me
+let myString='';
+if(num>=0){
+    for(let n=0;n<num;n++){
+        myString+=str;
+    }
+}
+console.log(myString)
+return myString;
+}
+repeatStringNumTimes("abc", -2);
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Truncate a String
+function truncateString(str, num) {
+    // Clear out that junk in your trunk
+    let target='';
+    let word='';
+    if(num>=str.length){
+        word=str;
+    }
+    else{
+        for(let i=0;i<str.length-1;i++){
+            target += str[i];
+            if(target.length==num){
+                word=target+'...';
+                break;
+            }
+        }
+    }
+    console.log(word);
+    return  word;
+}
+truncateString("A-tisket a-tasket A green and yellow basket", 8)
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Finders Keepers
+function findElement(arr, func) {
+    let num ;
+    for(let i=0;i<arr.length;i++){
+        if(func(arr[i]) ){
+            num = arr[i];
+            return num;
+        }
+    }
+    console.log(num);
+    return num;
+}
+findElement([1, 2, 3, 4], function(num) {
+    return num % 2 === 0;
+});
+findElement([1, 3, 5, 8, 9, 10], num => num % 2 === 0);
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Boo who
+function booWho(bool) {
+    return typeof bool === 'boolean';
+}
+booWho(true);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Title Case a Sentence
+
+function titleCase(str) {
+    str = str.toLowerCase().split(' ');
+    for (var i = 0; i < str.length; i++) {
+        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+    return str.join(' ');
+}
+titleCase("I'm a little tea pot");

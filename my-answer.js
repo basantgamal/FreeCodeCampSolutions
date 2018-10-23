@@ -4,6 +4,8 @@ var myStr = "I am a \"double quoted\" string inside \"double quotes\".";
 
 
 
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic JavaScript: Stand in Line
 function nextInLine(arr, item) {
@@ -16,6 +18,8 @@ var testArr = [1,2,3,4,5];
 console.log("Before: " + JSON.stringify(testArr));
 console.log(nextInLine(testArr, 6)); // Modify this line to test
 console.log("After: " + JSON.stringify(testArr));
+
+
 
 
 
@@ -44,6 +48,8 @@ function golfScore(par, strokes) {
 }
 // Change these values to test
 golfScore(5, 4);
+
+
 
 
 
@@ -80,6 +86,9 @@ function cc(card) {
   // Only change code above this line
 }
 cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+
+
 
 
 
@@ -138,8 +147,6 @@ var contacts = [
     }
     // Change these values to test your function
     console.log(lookUpProfile("Bob", "potato"));
-
-
 ////////////////or anoteher answer////////////////////////
 //Setup
 var contacts = [
@@ -195,6 +202,9 @@ function lookUpProfile(name, prop){
 
 
 
+
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //ES6: Prevent Object Mutation
 function freezeObj() {
@@ -235,7 +245,7 @@ const myConcat =(arr1, arr2) =>{
   return arr1.concat(arr2);
 };
 // test your code
-console.log(myConcat([1, 2], [3, 4, 5])); 
+console.log(myConcat([1, 2], [3, 4, 5]));
 
 
 
@@ -259,6 +269,9 @@ let arr2;
 })();
 console.log(arr2);
 
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //ES6: Write Higher Order Arrow Functions
 //https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/write-higher-order-arrow-functions
 const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -9];
@@ -277,6 +290,9 @@ document.write(squaredIntegers);
 
 
 
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/use-the-rest-operator-with-function-parameters
 //ES6: Use the Rest Operator with Function Parameters
 const sum = (function() {
@@ -293,6 +309,8 @@ console.log(sum(1,2,3,4)); //10
 
 
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //ES6: Use Destructuring Assignment to Assign Variables from Objects
 //https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-assign-variables-from-objects/
 const AVG_TEMPERATURES = {
@@ -311,6 +329,9 @@ console.log(getTempOfTmrw(AVG_TEMPERATURES)); // should be 79
 
 
 
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //ES6: Use Destructuring Assignment with the Rest Operator to Reassign Array Elements
 //https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-with-the-rest-operator-to-reassign-array-elements/
 const source = [1,2,3,4,5,6,7,8,9,10];
@@ -324,6 +345,8 @@ function removeFirstTwo(list) {
 const arr = removeFirstTwo(source);
 console.log(arr); // should be [3,4,5,6,7,8,9,10]
 console.log(source); // should be [1,2,3,4,5,6,7,8,9,10];
+
+
 
 
 
@@ -349,6 +372,9 @@ function zeroArray(m, n) {
 let matrix = zeroArray(3, 2);
 
 
+
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Data Structures: Add Items Using splice()
 function htmlColorNames(arr) {
@@ -364,6 +390,9 @@ console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'Pal
 
 
 
+
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Data Structures: Copy Array Items Using slice()
 function forecast(arr) {
@@ -373,6 +402,9 @@ function forecast(arr) {
 }
 // do not change code below this line
 console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+
+
 
 
 
@@ -392,6 +424,9 @@ function copyMachine(arr, num) {
 }
 // change code here to test different cases:
 console.log(copyMachine([true, false, true], 2));
+
+
+
 
 
 
@@ -418,6 +453,11 @@ function quickCheck(arr, elem) {
 }
 // change code here to test different cases:
 console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+
+
+
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -466,6 +506,9 @@ let myNestedArray = [ // top, or first level - the outer most array
 
 
 
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Data Structures: Add Key-Value Pairs to JavaScript Objects
 let foods = {
@@ -486,6 +529,8 @@ console.log(foods);
 
 
 
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Data Structures: Modify an Object Nested Within an Object
 let userActivity = {
@@ -500,6 +545,8 @@ let userActivity = {
 let online = userActivity.data['online']=45;
 // change code above this line
 console.log(userActivity);
+
+
 
 
 
@@ -526,6 +573,9 @@ console.log(checkInventory("apples"));
 
 
 
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Data Structures: Use the delete Keyword to Remove Object Properties
 let foods = {
@@ -542,6 +592,10 @@ delete foods.oranges;
 delete foods.plums;
 // change code above this line
 console.log(foods);
+
+
+
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -571,6 +625,10 @@ function isEveryoneHere(obj) {
     // change code above this line
 }
 console.log(isEveryoneHere(users));
+
+
+
+
 
 
 
@@ -611,6 +669,10 @@ countOnline(users);
 
 
 
+
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Data Structures: Generate an Array of All Object Keys with Object.keys()
 let users = {
@@ -639,6 +701,10 @@ function getArrayOfUsers(obj) {
     // change code above this line
 }
 console.log(getArrayOfUsers(users));
+
+
+
+
 
 
 
@@ -675,6 +741,9 @@ console.log(addFriend(user, 'Pete'));
 
 
 
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Algorithm Scripting: Convert Celsius to Fahrenheit
 function convertToF(celsius) {
@@ -683,6 +752,10 @@ function convertToF(celsius) {
     return fahrenheit;
 }
 convertToF(30);
+
+
+
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -712,6 +785,9 @@ reverseString("hello");
 
 
 
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Algorithm Scripting: Factorialize a Number
 function factorialize(num) {
@@ -731,6 +807,10 @@ function factorialize(num) {
     return factor;
 }
 console.log(factorialize(5));
+
+
+
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Algorithm Scripting: Find the Longest Word in a String
@@ -753,6 +833,10 @@ function findLongestWordLength(str) {
     return myLong;
 }
 findLongestWordLength("What if we try a super-long word such as otorhinolaryngology");
+
+
+
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -778,6 +862,10 @@ return myArray;
 largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]);
 
 
+
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Algorithm Scripting: Confirm the Ending
 function confirmEnding(str, target) {
@@ -790,7 +878,6 @@ confirmEnding("Bastian", "n");
 // or
 function confirmEnding(str, target) {
     // "Never give up and good luck will find you."
-    // -- Falcor
     let myArray=[...str];
     let targetArray=[...target];
     let j=myArray.length-1;
@@ -809,9 +896,10 @@ function confirmEnding(str, target) {
 confirmEnding("Bastian", "6n");
 
 
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Algorithm Scripting: Repeat a String Repeat a String
-
 function repeatStringNumTimes(str, num) {
 // repeat after me
 let myString='';
@@ -824,6 +912,9 @@ console.log(myString)
 return myString;
 }
 repeatStringNumTimes("abc", -2);
+
+
+
 
 
 
@@ -851,6 +942,9 @@ function truncateString(str, num) {
 truncateString("A-tisket a-tasket A green and yellow basket", 8)
 
 
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Algorithm Scripting: Finders Keepers
 function findElement(arr, func) {
@@ -872,12 +966,17 @@ findElement([1, 3, 5, 8, 9, 10], num => num % 2 === 0);
 
 
 
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Basic Algorithm Scripting: Boo who
 function booWho(bool) {
     return typeof bool === 'boolean';
 }
 booWho(true);
+
+
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -891,3 +990,471 @@ function titleCase(str) {
     return str.join(' ');
 }
 titleCase("I'm a little tea pot");
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Slice and Splice
+function frankenSplice(arr1, arr2, n) {
+
+    // It's alive. It's alive!
+    let arrCopy = arr2.slice();
+    arrCopy.splice(n, 0, ...arr1);
+    return arrCopy;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Falsy Bouncer
+function bouncer(arr) {
+    // Don't show a false ID to this bouncer.
+    return arr.filter(Boolean);
+}
+bouncer([7, "ate", "", false, 9]);
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Basic Algorithm Scripting: Mutations
+function mutation(arr) {
+    return arr[1].toLowerCase()
+        .split('')
+        .every(function(letter) {
+            return arr[0].toLowerCase()
+                .indexOf(letter) !== -1;
+        });
+}
+mutation(["hello", "hey"]);
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Basic Algorithm Scripting: Chunky Monkey
+function chunkArrayInGroups(arr, size) {
+    var arraySize  = arr.length/size;
+    var newArray = [];
+    for (var i = 0; i < arraySize ; i++){
+        var subArray= arr.splice(0,size);
+        newArray.push(subArray);
+    }
+    return newArray;
+}
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Sum All Numbers in a Range
+function sumAll(arr) {
+    let sum=0;
+    let first=arr[0];
+    let last=arr[1];
+    console.log(first);
+    console.log(last);
+    if(last<first){
+        let m;
+        m=first;
+        first=last;
+        last=m;
+        console.log(first);
+        console.log(last);
+    }
+    for (let j=last;j>=first;j--){
+        sum=sum+j;
+    }
+    return sum;
+}
+console.log(sumAll([4, 1]));
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Intermediate Algorithm Scripting: Diff Two Arrays
+function diffArray(arr1, arr2) {
+    let newArr = [];
+    function onlyInFirst(first, second) {
+        // Looping through an array to find elements that don't exist in another array
+        for (let i=0;i<first.length;i++) {
+            if (second.indexOf(first[i]) === -1) {
+                // Pushing the elements unique to first to newArr
+                newArr.push(first[i]);
+            }
+        }
+        // for (let i=0;i<second.length;i++) {
+        //     if (first.indexOf(second[i]) === -1) {
+        //         // Pushing the elements unique to first to newArr
+        //         newArr.push(first[i]);
+        //     }
+        // }
+    }
+    onlyInFirst(arr1, arr2);
+    onlyInFirst(arr2, arr1);
+    console.log(newArr)
+    return newArr;
+}
+diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Seek and Destroy
+//To convert arguments into an array use this code var args = Array.prototype.slice.call(arguments);
+function destroyer(arr) {
+    var args = Array.prototype.slice.call(arguments);
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < args.length; j++) {
+            if (arr[i] === args[j]) {
+                delete arr[i];
+            }
+        }
+    }
+    console.log(arr.filter(Boolean));
+    return arr.filter(Boolean);
+}
+destroyer([1, 2, 3, 1, 2, 3], 2, 3)
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Wherefore art thou
+function whatIsInAName(collection, source) {
+var srcKeys = Object.keys(source);
+
+return collection.filter(function (obj) {
+    return srcKeys.every(function (key) {
+        console.log(key);
+        return obj.hasOwnProperty(key) && obj[key] === source[key];
+    });
+});
+}
+// test here
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+//or
+function whatIsInAName(collection, source) {
+    // What's in a name?
+    var arr = [];
+    // Only change code below this line
+    arr = collection.filter(function(obj) {
+        var srcKeys = Object.keys(source);
+        var test = 0;
+        for (var i = 0; i < srcKeys.length; i++) {
+            if (obj.hasOwnProperty(srcKeys[i]) && obj[srcKeys[i]] === source[srcKeys[i]]) {
+                test += 1;
+            } else {
+                test += -1;
+            }
+        }
+        return test === srcKeys.length;
+    });
+    // Only change code above this line
+    return arr;
+}
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Spinal Tap Case
+function spinalCase(str) {
+    // Create a variable for the white space and underscores.
+    var regex = /\s+|_+/g;
+    // Replace low-upper case to low-space-uppercase
+    str = str.replace(/([a-z])([A-Z])/g, '$1 $2');
+    console.log(str.replace(regex, '-').toLowerCase())
+
+    // Replace space and underscore with -
+    return str.replace(regex, '-').toLowerCase();
+}
+// test here
+spinalCase('This Is Spinal Tap');
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Pig Latin
+function translatePigLatin(str) {
+    var length = str.length;
+    var tab = [];
+    if(str.match(/[aeiou]/gi) === null) {
+// Check if the string contains only consonants
+        var temp;
+        temp= str + 'ay';
+        return temp;
+    }
+    for(var i=0; i<length; i++){
+        var first = str.charAt(i);
+//voyelle
+        if(first === "a" || first === "e" || first === "i" || first === "o" || first === "u" || first === "y"){
+            if(i === 0){
+                str = str + "way";
+            }
+            else{
+                str = str.substring(i) + tab.join("") + "ay";
+            }
+            break;
+        }
+//consonne
+        else{
+            tab.push(first);
+        }
+    }
+    return str;
+}
+console.log(translatePigLatin("consonant"));
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: DNA Pairing
+function pairElement(str) {
+    // Return each strand as an array of two elements, the original and the pair.
+    var paired = [];
+    // Function to check with strand to pair.
+    var search = function(char) {
+        switch (char) {
+            case 'A':
+                paired.push(['A', 'T']);
+                break;
+            case 'T':
+                paired.push(['T', 'A']);
+                break;
+            case 'C':
+                paired.push(['C', 'G']);
+                break;
+            case 'G':
+                paired.push(['G', 'C']);
+                break;
+        }
+    };
+    // Loops through the input and pair.
+    for (var i = 0; i < str.length; i++) {
+        search(str[i]);
+    }
+    return paired;
+}
+// test here
+pairElement("GCG");
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Missing letters
+
+function fearNotLetter(str) {
+    for(var i = 0; i < str.length; i++) {
+        /* code of current character */
+        var code = str.charCodeAt(i);
+        /* if code of current character is not equal to first character + no of iteration
+        hence character has been escaped */
+        if (code !== str.charCodeAt(0) + i) {
+            /* if current character has escaped one character find previous char and return */
+            return String.fromCharCode(code - 1);
+        }
+    }
+    return undefined;
+}
+// test here
+fearNotLetter("abce");
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Sorted Union
+function uniteUnique(arr1, arr2, arr3) {
+    // Creates an empty array to store our final result.
+    var finalArray = [];
+
+    // Loop through the arguments object to truly made the program work with two or more arrays
+    // instead of 3.
+    for (var i = 0; i < arguments.length; i++) {
+        var arrayArguments = arguments[i];
+
+        // Loops through the array at hand
+        for (var j = 0; j < arrayArguments.length; j++) {
+            var indexValue = arrayArguments[j];
+
+            // Checks if the value is already on the final array.
+            if (finalArray.indexOf(indexValue) < 0) {
+                finalArray.push(indexValue);
+            }
+        }
+    }
+
+    return finalArray;
+}
+// test here
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Sum All Odd Fibonacci Numbers
+function sumFibs(num) {
+    var a = 1, b = 1, sum = 0;
+    while (a <= num && b <= num) {
+        if (a%2 !== 0)
+            sum+=a;
+        if (b%2 !== 0)
+            sum+=b;
+        a = a + b;
+        b = a + b;
+    }
+    if(a<=num && a%2 !== 0) /* this means b >=num but a<=num */
+        sum += a;
+    else if(b <= num && b%2 !== 0) /* this means a>=num but b<=num*/
+        sum += b;
+    return sum;
+}
+sumFibs(75025);
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Sum All Primes
+function sumPrimes(num) {
+    var x=2;
+    var added=2;
+    while (x<num) {
+        x++;
+        for (var i=2;i<x;i++){
+            if (x%i===0){
+                break;
+            }
+            else if (i===x-1) {
+                added+=x;}
+        }
+    }
+    return added;
+}
+sumPrimes(10);
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Smallest Common Multiple
+function smallestCommons(arr) {
+    var min = Math.min.apply(null, arr);
+    var max = Math.max.apply(null, arr);
+    var grandLCM;
+    for (var i=min; i<max; i++) {
+        if(i===min){
+            grandLCM = (i * (i+1))/gcd(i, i+1);
+        }else{
+            grandLCM = (grandLCM * (i+1))/gcd(grandLCM, i+1);
+        }
+    }
+    return grandLCM;
+    function gcd(x, y) {    // Implements The Euclidean Algorithm
+        if (y === 0)
+            return x;
+        else
+            return gcd(y, x%y);
+    }
+}
+// test here
+smallestCommons([1,5]);
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Drop it
+function dropElements(arr, func) {
+    // drop them elements.
+    var times = arr.length;
+    for (var i = 0; i < times; i++) {
+        if (func(arr[0])) {
+            break;
+        } else {
+            arr.shift();
+        }
+    }
+    return arr;
+}
+// test here
+dropElements([1, 2, 3, 4], function(n) {return n >= 3;})
+
+
+//or
+function dropElements(arr, func) {
+    if (arr.length === 0 || func(arr[0])) {
+        return arr;
+    } else {
+        arr.shift();
+        return dropElements(arr, func);
+    }
+}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Steamroller
+function steamrollArray(arr) {
+    var flattenedArray = [];
+    // Create function that adds an element if it is not an array.
+    // If it is an array, then loops through it and uses recursion on that array.
+    var flatten = function(arg) {
+        if (!Array.isArray(arg)) {
+            flattenedArray.push(arg);
+        } else {
+            for (var a in arg) {
+                flatten(arg[a]);
+            }
+        }
+    };
+    // Call the function for each element in the array
+    arr.forEach(flatten);
+    return flattenedArray;
+}
+// test here
+steamrollArray([1, [2], [3, [[4]]]]);
+
+
+
+
+

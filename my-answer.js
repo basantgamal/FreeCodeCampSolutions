@@ -1458,3 +1458,177 @@ steamrollArray([1, [2], [3, [[4]]]]);
 
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Intermediate Algorithm Scripting: Binary Agents
+function binaryAgent(str) {
+    // Separate the binary code by space.
+    str = str.split(' ');
+    var power;
+    var decValue = 0;
+    var sentence = '';
+
+    // Check each binary number from the array.
+    for (var s = 0; s < str.length; s++) {
+        // Check each bit from binary number
+        for (var t = 0; t < str[s].length; t++) {
+            // This only takes into consideration the active ones.
+            if (str[s][t] == 1) {
+                // This is quivalent to 2 ** position
+                power = Math.pow(2, +str[s].length - t - 1);
+                decValue += power;
+
+                // Record the decimal value by adding the number to the previous one.
+            }
+        }
+
+        // After the binary number is converted to decimal, convert it to string and store
+        sentence += (String.fromCharCode(decValue));
+
+        // Reset decimal value for next binary number.
+        decValue = 0;
+    }
+
+    return sentence;
+}
+
+// test here
+binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Intermediate Algorithm Scripting: Everything Be True
+function truthCheck(collection, pre) {
+    // Create a counter to check how many are true.
+    var counter = 0;
+    // Check for each object
+    for (var c in collection) {
+        // If it is has property and value is truthy
+        if (collection[c].hasOwnProperty(pre) && Boolean(collection[c][pre])) {
+            counter++;
+        }
+    }
+    // Outside the loop, check to see if we got true for all of them and return true or false
+    return counter == collection.length;
+}
+// test here
+truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Arguments Optional
+function addTogether() {
+    // Function to check if a number is actually a number
+    // and return undefined otherwise.
+    var checkNum = function(num) {
+        if (typeof num !== 'number') {
+            return undefined;
+        } else
+            return num;
+    };
+
+    // Check if we have two parameters, check if they are numbers
+    // handle the case where one is not
+    // returns the addition.
+    if (arguments.length > 1) {
+        var a = checkNum(arguments[0]);
+        var b = checkNum(arguments[1]);
+        if (a === undefined || b === undefined) {
+            return undefined;
+        } else {
+            return a + b;
+        }
+    } else {
+        // If only one parameter was found, returns a new function that expects two
+        // Store first argument before entering the new function scope
+        var c = arguments[0];
+
+        // Check the number again, must be outside the function to about returning an object
+        // instead of undefined.
+        if (checkNum(c)) {
+            // Return function that expect a second argument.
+            return function(arg2) {
+                // Check for non-numbers
+                if (c === undefined || checkNum(arg2) === undefined) {
+                    return undefined;
+                } else {
+                    // if numbers then add them.
+                    return c + arg2;
+                }
+            };
+        }
+    }
+}
+// test here
+addTogether(2,3);
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Intermediate Algorithm Scripting: Make a Person
+var Person = function(firstAndLast) {
+    var fullName = firstAndLast;
+    var arr = fullName.split(' ');
+    this.getFirstName = function() {
+        return arr[0];
+    };
+    this.getLastName = function() {
+        return arr[1];
+    };
+    this.getFullName = function() {
+        return fullName;
+    };
+    this.setFirstName = function(first) {
+        arr[0] = first;
+        fullName = arr.join(' ');
+    };
+    this.setLastName = function(last) {
+        arr[1] = last;
+        fullName = arr.join(' ');
+    };
+    this.setFullName = function(firstAndLast) {
+        fullName = firstAndLast;
+        arr = fullName.split(' ');
+    };
+};
+var bob = new Person('Bob Ross');
+bob.getFullName();
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Intermediate Algorithm Scripting: Map the Debris
+function orbitalPeriod(arr) {
+    var GM = 398600.4418;
+    var earthRadius = 6367.4447;
+    var a = 2 * Math.PI;
+    var newArr = [];
+    var getOrbPeriod = function(obj) {
+        var c = Math.pow(earthRadius + obj.avgAlt, 3);
+        var b = Math.sqrt(c / GM);
+        var orbPeriod = Math.round(a * b);
+        delete obj.avgAlt;
+        obj.orbitalPeriod = orbPeriod;
+        return obj;
+    };
+    for (var elem in arr) {
+        newArr.push(getOrbPeriod(arr[elem]));
+    }
+    return newArr;
+}
+// test here
+orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
+

@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;}
+.slider{
+    position:relative;
+    overflow:hidden;
+    margin:0;
+    border-radius:4px;
+}
+.slider ul{
+    position:relative;
+    margin:0;padding:0;
+    height:100%;
+    list-style:none;
+    width:100%;
+    overflow:hidden;
+    left:0;}
+.slider ul li{
+    position:absolute;
+    float:left;
+    margin:0;
+    padding:0;
+    width:500px;
+    height:300px;
+    text-align:center;
+    transition: ease-out 0.4s;
+    color: #fff;
+    font-size: 22px;
+    font-family: monospace;
+    display: flex;
+    background: gainsboro;
+}
+.slider ul li span{
+    margin:auto;
+    /* background: gainsboro; */
+    /* width: 100%; */
+    /* height: 100%; */
+}
+.slider ul li.active{
+    left: 0;
+}
+.slider ul li.slider1{
+    background: url("img/1.jpg");
+    background-size: cover;
+}
+.slider ul li.slider2{
+    background: url("img/2.jpg");
+    background-size: cover;
+}
+.slider ul li.slider3{
+    background: url("img/3.jpg");
+    background-size: cover;
+}
+.slider ul li.slider4{
+    background:  url("img/4.jpg");
+    background-size: cover;
+}
+.slider ul li.slider5{
+    background:  url("img/5.jpg");
+    background-size: cover;
+}
+.slider ul li.slider6{
+    background:  url("img/6.jpg");
+    background-size: cover;
+}
+.slider ul li.slider7{
+    background: url("img/7.jpg");
+    background-size: cover;
+}
+/*controls*/
+.controls{
+    -webkit-transition:all 0.5s ease;
+    /* opacity: 0; */
+}
+.control-prev,
+.control-next{
+    position:absolute;
+    top:40%;
+    z-index: 1030;
+    display:block;
+    padding:20px;
+    width:auto;
+    height:auto;
+    background: rgb(6, 18, 29);
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    font-size:18px;
+    /* opacity:0; */
+    cursor:pointer;
+}
+.slider:hover .controls{
+    -webkit-transition:all 0.5s ease;
+    opacity: 1;
+}
+.slider:hover .controls .control-prev,
+.slider:hover .controls .control-next{
+    /* opacity: 1; */
+}
+.control-prev{
+    left:0;
+    border-radius: 0 10px 10px 0;
+}
+.control-next{
+    right:0;
+    border-radius:10px 0 0 10px;
+}
+.slider:hover .controls .control-prev:hover,
+.slider:hover .controls .control-next:hover{
+    /* opacity:1; */
+    color:black;
+    background: gainsboro;
+    -webkit-transition:all 0.2s ease;
+}
